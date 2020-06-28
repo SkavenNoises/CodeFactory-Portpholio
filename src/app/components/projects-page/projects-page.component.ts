@@ -12,4 +12,9 @@ export class ProjectsPageComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {}
+
+  // Opens up a new tab with the served website on click of the desired project-card
+  onClick(card: any) {
+    window.open(`/assets/websites/${card.src}/index.html`);
+  }
 }
