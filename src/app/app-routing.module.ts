@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { HomePageComponent } from './components/home-page/home-page.component';
+import { GithubPageComponent } from './components/github-page/github-page.component';
+import { ProjectsPageComponent } from './components/projects-page/projects-page.component';
 
-
-const routes: Routes = [];
+const routes: Routes = [
+  { path: '', component: HomePageComponent },
+  { path: 'github', component: GithubPageComponent },
+  { path: 'projects', component: ProjectsPageComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
